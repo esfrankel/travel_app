@@ -21,9 +21,12 @@
         {{# if currentUserId}}
           <a class="navbar-link" href="/logout">Log out</a>
         {{else}}
-          <a class="navbar-link" href="/login">Log in</a>
-          <a class="navbar-link" href="/users/new">Sign up</a>
-        {{/if}}
+          <p>
+            <a class="navbar-link" href="/login">Log in</a> |
+            <a class="navbar-link" href="/users/new">Sign up</a>
+          {{/if}}
+          </p>
+
       </div>
     </nav>
 
