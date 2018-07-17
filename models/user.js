@@ -1,11 +1,15 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 
 const UserSchema = new Schema({
   username: { type: String, required: true },
   password: { type: String, required: true },
+<<<<<<< HEAD
   trips: { type: Schema.Types.ObjectId }
+=======
+  trips: [{type: Schema.Types.ObjectId, ref: 'Trip'}]
+>>>>>>> obie
 });
 
 UserSchema.pre('save', function(next) {

@@ -4,6 +4,7 @@ const router = express.Router();
 const auth = require('./helpers/auth');
 const Trip = require('../models/trip');
 
+<<<<<<< HEAD
 // Trips Index
 router.get('/', (req, res, next) =>{
   res.render('/');
@@ -42,3 +43,9 @@ router.get('/:id', auth.requireLogin, (req, res, next) => {
       res.render('trips/show', { trip: trip });
     });
   });
+=======
+// Rooms Index
+router.get('/', (req, res, next) =>{
+  res.render('/',);
+})
+>>>>>>> obie

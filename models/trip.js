@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
@@ -8,3 +9,6 @@ const TripSchema = new Schema({
 });
 
 module.exports = mongoose.model('Trip', TripSchema);
+=======
+
+>>>>>>> obie
