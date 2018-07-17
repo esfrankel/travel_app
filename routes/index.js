@@ -5,7 +5,7 @@ const router = express.Router();
 
 // Set layout variables
 router.use((req, res, next) => {
-  res.locals.title = 'MakeReddit';
+  res.locals.title = 'WanderList';
   res.locals.currentUserId = req.session.userId;
 
   next();
