@@ -36,7 +36,7 @@ router.get(':id/edit', auth.requireLogin, (req, res, next) => {
 
 //Trip show
 router.get('/:id', auth.requireLogin, (req, res, next) => {
-    Trip.findById(req.params.id, (err, room) => {
+    Trip.findById(req.params.id, (err, trip) => {
       if(err) { console.error(err) };
 
       res.render('trips/show', { trip: trip });
