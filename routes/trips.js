@@ -52,6 +52,3 @@ router.get('/:id', auth.requireLogin, (req, res, next) => {
   });
 
 module.exports = router;
-<<<<<<< HEAD
-=======
->>>>>>> obie
