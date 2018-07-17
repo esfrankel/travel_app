@@ -6,8 +6,16 @@ const Trip = require('../models/trip');
 
 // Trips Index
 router.get('/', (req, res, next) =>{
-  res.render('/');
-})
+  Trip.find({}, (err, trip) => {
+    if (err) {
+      console.log(err);
+    }
+
+    res.render('trips/index', {
+      trip: trip
+    });
+  });
+});
 
 //Trips Create
 router.post('/', auth.requireLogin, (req, res, next) => {
