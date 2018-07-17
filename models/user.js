@@ -5,7 +5,11 @@ const bcrypt = require('bcryptjs');
 const UserSchema = new Schema({
   username: { type: String, required: true },
   password: { type: String, required: true },
+<<<<<<< HEAD
   trips: [{type: Schema.Types.ObjectId, ref: 'Trip'}]
+=======
+  trips: { type: Schema.Types.ObjectId }
+>>>>>>> 39c4f78a16b05249090bd5ea6b7281a9b9d92721
 });
 
 UserSchema.pre('save', function(next) {

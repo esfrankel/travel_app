@@ -1,10 +1,37 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{{title}}</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>WanderList</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    {{{body}}}
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="navbar-brand">
+        WanderList
+      </div>
+
+      <div class="navbar-text">
+        {{# if currentUserId}}
+          <a class="navbar-link" href="/logout">Log out</a>
+        {{else}}
+          <p>
+            <a class="navbar-link" href="/login">Log in</a> |
+            <a class="navbar-link" href="/users/new">Sign up</a>
+          {{/if}}
+          </p>
+
+      </div>
+    </nav>
+
+    <main>
+      {{{body}}}
+    </main>
   </body>
 </html>
