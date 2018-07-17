@@ -13,11 +13,12 @@ router.get('/', auth.requireLogin, (req, res, next) => {
   });
 });
 
+// Users new
 router.get('/new', function(req, res, next) {
   res.render('users/new');
 });
 
-/* create users */
+// Users create
 router.post('/', (req, res, next) => {
   const user = new User(req.body);
 
