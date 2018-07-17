@@ -4,51 +4,28 @@ const router = express.Router();
 const auth = require('./helpers/auth');
 const Trip = require('../models/trip');
 
-// Trips Index
-router.get('/', (req, res, next) =>{
- Trip.find({}, (err, trip) => {
-   if (err) {
-     console.log(err);
-   }
-
-   res.render('trips/index', {
-     trip: trip
-   });
- });
-});
-
-//Trips Create
-router.post('/', auth.requireLogin, (req, res, next) => {
-    let trip = new Trip(req.body);
-
-    trip.save(function(err, room) {
-      if(err) { console.error(err) };
-
-      return res.redirect('/trips');
-    });
+router.get('/', (req, res, next) => {
+  Trip.find({}, 'topic', function(err, trips) {
+    if (err) {
+      console.error(err);
+    }
+    res.render('trips/index', { trips: trips });
   });
-
-//Trip new
-router.get('/new', auth.requireLogin, (req, res, next) => {
-  res.render('trips/new');
 });
 
-//Trip edit
-router.get(':id/edit', auth.requireLogin, (req, res, next) => {
-  Trip.findById(req.params.id, (err, trip) => {
-    if (err) {console.error(err)};
+router.get('/new', (req, res, next) =>{
+  res.render('trips/new')
+})
 
-    res.render('trips/edit', {trip: trip});
-    })
-});
+router.post('/', (req, res, next) => {
+  let trip = new Trip(req.body);
 
-//Trip show
-router.get('/:id', auth.requireLogin, (req, res, next) => {
-    Trip.findById(req.params.id, (err, trip) => {
-      if(err) { console.error(err) };
-
-      res.render('trips/show', { trip: trip });
-    });
+  trip.save(function(err, trip) {
+    if (err) {
+      console.error(err);
+    }
+    return res.redirect('/trips');
   });
+});
 
 module.exports = router;
