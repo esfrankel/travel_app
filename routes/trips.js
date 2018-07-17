@@ -5,9 +5,23 @@ const auth = require('./helpers/auth');
 const Trip = require('../models/trip');
 
 // Trips Index
+<<<<<<< HEAD
 router.get('/', (req, res, next) => {
   res.render('/');
 })
+=======
+router.get('/', (req, res, next) =>{
+  Trip.find({}, (err, trip) => {
+    if (err) {
+      console.log(err);
+    }
+
+    res.render('trips/index', {
+      trip: trip
+    });
+  });
+});
+>>>>>>> 606ba593f78d848c6e897e7ebf28e76c6dc59766
 
 //Trips Create
 router.post('/', auth.requireLogin, (req, res, next) => {
@@ -42,3 +56,5 @@ router.get('/:id', auth.requireLogin, (req, res, next) => {
       res.render('trips/show', { trip: trip });
     });
   });
+
+module.exports = router;
