@@ -1,4 +1,3 @@
-<<<<<<< current
 const express = require('express');
 const User = require('../models/user');
 
@@ -48,7 +47,6 @@ router.get('/logout', (req, res, next) => {
 })
 
 module.exports = router;
-=======
 const express = require('express');
 const User = require('../models/user');
 
@@ -90,7 +88,6 @@ router.post('/login', (req, res, next) => {
 });
 
 router.get('/logout', (req, res, next) => {
-  if (req.session) {
     req.session.destroy((err) => {
       if (err) return next(err);
     })
@@ -100,4 +97,3 @@ router.get('/logout', (req, res, next) => {
 })
 
 module.exports = router;
->>>>>>> before discard
