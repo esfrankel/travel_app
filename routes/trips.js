@@ -50,3 +50,5 @@ router.get('/:id', auth.requireLogin, (req, res, next) => {
       res.render('trips/show', { trip: trip });
     });
   });
+
+module.exports = router;
