@@ -5,10 +5,12 @@ const auth = require('./helpers/auth');
 const Trip = require('../models/trip');
 
 router.get('/', (req, res, next) => {
-  Trip.find({}, 'topic', function(err, trips) {
+  Trip.find({}, function(err, trips) {
     if (err) {
       console.error(err);
     }
+
+    console.log(trips);
     res.render('trips/index', { trips: trips });
   });
 });
