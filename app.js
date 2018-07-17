@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> obie
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -48,11 +44,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-<<<<<<< HEAD
-
-=======
 const mongoose = require('mongoose');
->>>>>>> obie
 const mongoURI = 'mongodb://wanderlist:Password1@ds139951.mlab.com:39951/wanderlist';
 mongoose.connect(mongoURI)
 mongoose.Promise = global.Promise;
