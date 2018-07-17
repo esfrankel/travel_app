@@ -6,15 +6,15 @@ const Trip = require('../models/trip');
 
 // Trips Index
 router.get('/', (req, res, next) =>{
-  Trip.find({}, (err, trip) => {
-    if (err) {
-      console.log(err);
-    }
+ Trip.find({}, (err, trip) => {
+   if (err) {
+     console.log(err);
+   }
 
-    res.render('trips/index', {
-      trip: trip
-    });
-  });
+   res.render('trips/index', {
+     trip: trip
+   });
+ });
 });
 
 //Trips Create
