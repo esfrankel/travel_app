@@ -12,8 +12,16 @@ router.get('/', (req, res, next) =>{
 =======
 // Trips Index
 router.get('/', (req, res, next) =>{
-  res.render('/');
-})
+  Trip.find({}, (err, trip) => {
+    if (err) {
+      console.log(err);
+    }
+
+    res.render('trips/index', {
+      trip: trip
+    });
+  });
+});
 
 //Trips Create
 router.post('/', auth.requireLogin, (req, res, next) => {
@@ -48,4 +56,9 @@ router.get('/:id', auth.requireLogin, (req, res, next) => {
       res.render('trips/show', { trip: trip });
     });
   });
+<<<<<<< HEAD
 >>>>>>> 39c4f78a16b05249090bd5ea6b7281a9b9d92721
+=======
+
+module.exports = router;
+>>>>>>> 606ba593f78d848c6e897e7ebf28e76c6dc59766
