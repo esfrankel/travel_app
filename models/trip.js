@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> obie
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
@@ -9,6 +14,10 @@ const TripSchema = new Schema ({
 });
 
 module.exports = mongoose.model('Trip', TripSchema);
+<<<<<<< HEAD
 =======
 
+>>>>>>> obie
+=======
+>>>>>>> 39c4f78a16b05249090bd5ea6b7281a9b9d92721
 >>>>>>> obie
