@@ -4,12 +4,12 @@ const User = require('../models/user.js');
 const router = express.Router();
 
 // Set layout variables
-router.use((req, res, next) => [
+router.use((req, res, next) => {
   res.locals.title = 'WanderList';
   res.locals.currentUserId = req.session.userId;
 
   next();
-]);
+});
 
 // Home Page
 router.get('/',(req, res) => {
