@@ -28,6 +28,7 @@ app.use(session({secret: 'secret-unique-code', cookie: { maxAge: 3600000 }, resa
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/trips', tripsRouter);
+app.use('/events', eventsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
