@@ -5,7 +5,11 @@ const router = express.Router();
 
 // Set layout variables
 router.use((req, res, next) => {
+<<<<<<< HEAD
   res.locals.title = 'MakeReddit';
+=======
+  res.locals.title = 'WanderList';
+>>>>>>> d3132a55c0477d68f98cdb631d211b99d148b58d
   res.locals.currentUserId = req.session.userId;
 
   next();
@@ -37,5 +41,13 @@ router.post('/login', (req, res, next) => {
     }
   });
 });
+
+router.get('/logout', (req, res, next) => {
+  if (req.session) {
+    req.session.destroy((err) => {
+      if (err) return next(err);
+    })
+  }
+})
 
 module.exports = router;
