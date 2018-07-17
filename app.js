@@ -1,4 +1,3 @@
-<!-- hi -->
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -47,7 +46,6 @@ app.use(function(err, req, res, next) {
 
 const mongoose = require('mongoose');
 const mongoURI = 'mongodb://wanderlist:Password1@ds139951.mlab.com:39951/wanderlist';
-
 mongoose.connect(mongoURI)
 mongoose.Promise = global.Promise;
 let db = mongoose.connection;
