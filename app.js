@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<!-- hi -->
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -7,13 +6,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const session = require('express-session');
 const mongoose = require('mongoose');
-=======
-const createError = require('http-errors');
-const express = require('express');
-const path = require('path');
-const cookieParser = require('cookie-parser');
-const logger = require('morgan');
->>>>>>> obie
+
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
@@ -54,12 +47,8 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-const mongoose = require('mongoose');
-const mongoURI = 'mongodb://wanderlist:Password1@ds139951.mlab.com:39951/wanderlist';
-<<<<<<< HEAD
 
-=======
->>>>>>> obie
+const mongoURI = 'mongodb://wanderlist:Password1@ds139951.mlab.com:39951/wanderlist';
 mongoose.connect(mongoURI)
 mongoose.Promise = global.Promise;
 let db = mongoose.connection;
