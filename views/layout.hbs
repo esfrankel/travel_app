@@ -18,7 +18,11 @@
       </div>
 
       <div class="navbar-text">
-        log in/log out
+        {{# if currentUserId}}
+          <a class="navbar-link" href="/logout">Log out</a>
+        {{else}}
+          <a class="navbar-link" href="/login">Log in</a>
+        {{/if}}
       </div>
     </nav>
 
