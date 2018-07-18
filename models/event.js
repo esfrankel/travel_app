@@ -8,7 +8,7 @@ const EventSchema = new Schema({
   time: { type: String},
   loc: { type: String},
   price: { type: Number},
-  trip: { type: Schema.Types.ObjectId, ref: 'Trip'}
+  trip: { type: Schema.Types.ObjectId, ref: 'Trip'},
 });
 
 module.exports = mongoose.model('Event', EventSchema);
