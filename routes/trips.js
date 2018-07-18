@@ -58,9 +58,17 @@ router.post('/:id', auth.requireLogin, (req, res, next) => {
 router.post('/', auth.requireLogin, (req, res, next) => {
   User.findById(req.params.userId, function(err, user) {
     if (err) {console.error(err);}
-  }
+
     let trip = new Trip(req.body);
-    trip.user = user;
+    trip.users.push(req.session.userId);
+    const regex = /(\b\w*\b)/;
+    let usernames = req.body.share.match(regex);
+    for (var username in usernames) {
+      User.find({ username: username}, function(err, found_user) {
+        if (err) { continue; }
+        trip.users.push(found_user);
+      });
+    }
 
     trip.save(function(err, trip) {
       if (err) { console.error(err);}
