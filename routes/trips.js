@@ -5,6 +5,7 @@ const auth = require('./helpers/auth');
 const Trip = require('../models/trip');
 const Event_Test = require('../models/event');
 const events = require('./events');
+const User = require('../models/user');
 
 
 router.get('/', auth.requireLogin, (req, res, next) => {
@@ -19,7 +20,11 @@ router.get('/', auth.requireLogin, (req, res, next) => {
 });
 
 router.get('/new', auth.requireLogin, (req, res, next) =>{
-  res.render('trips/new');
+  User.findById(req.params.userId, function(err, trip) {
+    if(err) { console.error(err);}
+
+    res.render('trips/new');
+  })
 });
 
 router.get('/:id', auth.requireLogin, (req, res, next) => {
@@ -51,13 +56,16 @@ router.post('/:id', auth.requireLogin, (req, res, next) => {
 })
 
 router.post('/', auth.requireLogin, (req, res, next) => {
-  let trip = new Trip(req.body);
+  User.findById(req.params.userId, function(err, user) {
+    if (err) {console.error(err);}
+  }
+    let trip = new Trip(req.body);
+    trip.user = user;
 
-  trip.save(function(err, trip) {
-    if (err) {
-      console.error(err);
-    }
-    return res.redirect('/trips');
+    trip.save(function(err, trip) {
+      if (err) { console.error(err);}
+      return res.redirect('/trips')
+    });
   });
 });
 
