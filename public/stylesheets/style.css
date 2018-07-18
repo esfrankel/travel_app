@@ -131,6 +131,10 @@ h2 {
   width: 30%;
   text-align: center;
   color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 h3.trips-name {
@@ -145,7 +149,7 @@ a.trips-link {
 }
 
 a.trips-link:visited {
-  color: blue;
+  color: black;
 }
 a.trips-link:link {
   color: #FFCC00;
