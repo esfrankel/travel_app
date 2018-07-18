@@ -4,9 +4,6 @@ const auth = require('./helpers/auth');
 const Trip = require('../models/trip');
 const Event = require('../models/event');
 
-// Posts new
-router.get('/new', auth.requireLogin, (req, res, next) => {
-
 // Event new
 router.get('/new', auth.requireLogin, (req, res, next) => {
   Trip.findById(req.params.roomId, function(err, room) {
@@ -30,6 +27,6 @@ router.post('/', auth.requireLogin, (req, res, next) => {
       return res.redirect(`/trips/${trip._id}`);
     });
   });
-})
+});
 
 module.exports = router;
