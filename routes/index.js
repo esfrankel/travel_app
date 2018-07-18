@@ -33,7 +33,7 @@ router.post('/login', (req, res, next) => {
     } else {
       req.session.userId =  user._id;
 
-      return res.redirect('/');
+      return res.redirect('/trips');
     }
   });
 });
@@ -42,8 +42,9 @@ router.get('/logout', (req, res, next) => {
   if (req.session) {
     req.session.destroy((err) => {
       if (err) return next(err);
-    })
+    });
   }
-})
+  return res.redirect('/login');
+});
 
 module.exports = router;
