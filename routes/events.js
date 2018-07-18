@@ -5,7 +5,7 @@ const Trip = require('../models/trip');
 
 // Posts new
 router.get('/new', auth.requireLogin, (req, res, next) => {
-  
+
 });
 
 // Posts create
