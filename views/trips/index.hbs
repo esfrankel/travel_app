@@ -2,6 +2,7 @@
   <h2> My Trips </h2>
 </header>
 
+<<<<<<< HEAD
 <a href="/trips/new">Create a new trip!</a>
 
 <div class="trips-body">
@@ -19,6 +20,22 @@
           </div>
       </div>
   {{/each}}
+=======
+<div class="section alltrips">
+  <a href="/trips/new" class="btn btn-default" id="btn-newtrip">
+    Create a new trip!
+  </a>
+>>>>>>> beverly
 
+  <div class="trips-body">
+    {{#each trips}}
+      <div class="trips summary">
+        <h3 class="trips-name">{{this.name}}</h3>
+        <p class="trips-desc">Description: {{this.desc}}</p>
+        <p class="trips-events">{{this.events}}</p>
+        <a class="trips-link" href="/trips/{{this._id}}">Read More</a>
+        </div>
+    {{/each}}
 
+  </div>
 </div>
