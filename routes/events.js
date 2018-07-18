@@ -3,11 +3,9 @@ const router = express.Router({mergeParams: true});
 const auth = require('./helpers/auth');
 const Trip = require('../models/trip');
 const Event = require('../models/event');
-<<<<<<< HEAD
+
 // Posts new
 router.get('/new', auth.requireLogin, (req, res, next) => {
-
-=======
 
 // Event new
 router.get('/new', auth.requireLogin, (req, res, next) => {
@@ -16,7 +14,6 @@ router.get('/new', auth.requireLogin, (req, res, next) => {
 
     res.render('events/new', { trip: trip });
   });
->>>>>>> obie
 });
 
 // Posts create
