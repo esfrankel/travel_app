@@ -1,7 +1,3 @@
-#navbar-real {
-  background-color: rgba(255,255,255,0.5) !important;
-}
-
 .section.header {
   position: relative;
   background: #5C97FF;
@@ -26,6 +22,7 @@
   background-repeat: no-repeat;
   opacity: 0.6;
 }
+
 .section.header h1 {
   padding: 200px;
   text-align: center;
@@ -36,4 +33,14 @@
   font-family: Lobster;
   font-size: 80px;
   letter-spacing: 5px;
+}
+
+.navbar-brand {
+  font-family: 'Markazi Text' !important;
+  font-size: 25px !important;
+}
+
+.navbar-text {
+  font-family: 'Markazi Text' !important;
+  font-size: 25px !important;
 }
