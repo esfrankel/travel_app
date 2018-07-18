@@ -3,13 +3,13 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-.main {
-  background-color: #F0F8FF;
+.main-page {
   padding: 140px 0px 100px;
-  background-image: url("/img/landing-page-background.jpg");
+  background-image: url("../img/landing-page-background.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  color: white;
 }
 
 .nav-item {
@@ -18,7 +18,7 @@ body {
   align-items: center;
 }
 
-nav {
+.navbar {
   width: 100%;
 }
 
