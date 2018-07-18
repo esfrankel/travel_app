@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Markazi+Text" rel="stylesheet">
 
     <title>WanderList</title>
     <link rel="stylesheet" href="/stylesheets/style.css">
@@ -16,9 +16,12 @@
 
   <body>
 
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light" id="navbar-real">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid navbar-container">
-        <a class="navbar-brand" href="/">WanderList</a>
+        <div class="left-nav">
+          <img src="../img/logo.jpg" alt="logo" class="logo">
+          <a class="navbar-brand" href="/">WanderList</a>
+        </div>
 
         <div class="navbar-text">
           {{# if currentUserId}}
