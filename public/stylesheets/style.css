@@ -63,13 +63,28 @@
 .section.second {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   padding: 100px 0;
 }
 
 li.list-item {
-  padding: 30px 130px;
+  padding: 40px 130px;
   margin: 10px;
   list-style-type: none;
   border: 1px solid black;
+}
+
+li.list-item-img {
+  list-style-type: none;
+  margin: 20px 0 20px 80px;
+}
+
+.section.left {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section.left img {
+  height: 150px;
+  width: 150px;
 }
