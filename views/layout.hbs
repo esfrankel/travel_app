@@ -8,27 +8,28 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Markazi+Text" rel="stylesheet">
+
     <title>WanderList</title>
     <link rel="stylesheet" href="/stylesheets/style.css">
   </head>
 
   <body>
 
-    <nav class="navbar navbar-static-top navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="/">
-          WanderList
-        </a>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid navbar-container">
+        <div class="left-nav">
+          <img src="../img/logo.jpg" alt="logo" class="logo">
+          <a class="navbar-brand" href="/">WanderList</a>
+        </div>
 
         <div class="navbar-text">
           {{# if currentUserId}}
             <a class="navbar-link" href="/logout">Log out</a>
           {{else}}
-            <p>
               <a class="navbar-link" href="/login">Log in</a> |
               <a class="navbar-link" href="/users/new">Sign up</a>
             {{/if}}
-            </p>
         </div>
       </div>
     </nav>
@@ -36,5 +37,10 @@
     <main>
       {{{body}}}
     </main>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
 </html>

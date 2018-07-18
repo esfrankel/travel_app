@@ -1,27 +1,61 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+.section.header {
+  position: relative;
+  background: #5C97FF;
+  overflow: hidden;
 }
 
-.main-page {
-  padding: 140px 0px 100px;
+.section.header:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.6;
+
+  padding: 200px;
   background-image: url("../img/landing-page-background.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  color: white;
+  opacity: 0.6;
 }
 
-.nav-item {
+.section.header h1 {
+  padding: 200px;
+  text-align: center;
+  z-index: 2;
+  position: relative;
+
+  color: white;
+  font-family: Lobster;
+  font-size: 80px;
+  letter-spacing: 5px;
+}
+
+.left-nav {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
 }
 
-.navbar {
-  width: 100%;
+.logo {
+  height: 40px;
+  width: 40px;
+  margin-left: -5px;
+  background-color: #f8f9fa;
+  background-blend-mode: screen;
 }
 
-a {
-  color: #00B7FF;
+.navbar-brand {
+  font-family: 'Markazi Text' !important;
+  font-size: 30px !important;
+  margin-left: 10px;
+}
+
+.navbar-text {
+  font-family: 'Markazi Text' !important;
+  font-size: 25px !important;
 }
