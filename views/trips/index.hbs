@@ -2,24 +2,20 @@
   <h2> My Trips </h2>
 </header>
 
-<a href="/trips/new">Create a new trip!</a>
+<div class="section alltrips">
+  <a href="/trips/new" class="btn btn-default" id="btn-newtrip">
+    Create a new trip!
+  </a>
 
-<div class="trips-body">
-  {{#each trips}}
-      <div class="col-12 col-md-6 col-lg-4">
-          <div class="trips summary">
-              <div class="card-header text-muted">
-                  THIS IS A TRIP
-              </div>
-              <div class="card-body">
-                  <h1 class="card-title">{{this.name}}</h1>
-                  <p class="card-text">Description: {{this.desc}}</p>
-                  <p class="card-text">{{this.events}}</p>
-                  <a class="card-link" href="/trips/{{this._id}}">Read More</a>
-              </div>
-          </div>
-      </div>
-  {{/each}}
+  <div class="trips-body">
+    {{#each trips}}
+      <div class="trips summary">
+        <h3 class="trips-name">{{this.name}}</h3>
+        <p class="trips-desc">Description: {{this.desc}}</p>
+        <p class="trips-events">{{this.events}}</p>
+        <a class="trips-link" href="/trips/{{this._id}}">Read More</a>
+        </div>
+    {{/each}}
 
-
+  </div>
 </div>
