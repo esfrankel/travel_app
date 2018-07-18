@@ -8,6 +8,13 @@
   justify-content: center;
 }
 
+.submit-button {
+  background-color: #CC3333 !important;
+  border-color: #CC3333;
+  font-family: 'Josefin Sans';
+  margin-bottom: 30px;
+}
+
 .section.header {
   position: relative;
   background: #5C97FF;
@@ -102,9 +109,9 @@ li.list-item-img {
 h2 {
   text-align: center;
   font-family: 'Slabo 27px';
-  padding: 20px;
   font-size: 50px;
   font-weight: bold;
+  padding: 30px 0 10px 0;
 }
 
 .section.alltrips {
@@ -146,6 +153,7 @@ h3.trips-name {
 
 a.trips-link {
   font-family: 'Josefin Sans';
+  font-size: 18px;
 }
 
 a.trips-link:visited {
@@ -167,9 +175,33 @@ a.trips-link:hover {
   background-color: #FFCC00;
   color: black;
   width: 15%;
-  font-family: 'Open Sans';
+  font-family: 'Josefin Sans';
 }
 
 #btn-newtrip:hover {
   color: white;
+}
+
+#trip-title, #trip-share,
+.newevent {
+  font-family: 'Lato';
+  font-size: 20px;
+}
+
+h3 {
+  font-family: 'Josefin Sans';
+}
+
+a.addevent:visited {
+  color: #CC3333;
+}
+a.addevent:link {
+  color: #FFCC00;
+}
+a.addevent:active {
+  color: green;
+}
+a.addevent:hover {
+  color: #FFCC00;
+  text-decoration: none;
 }
