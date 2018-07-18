@@ -25,10 +25,11 @@
 
         <div class="navbar-text">
           {{# if currentUserId}}
+            <a class="navbar-link" href="/trips">My Trips</a>
             <a class="navbar-link" href="/logout">Log out</a>
           {{else}}
-              <a class="navbar-link" href="/login">Log in</a> |
-              <a class="navbar-link" href="/users/new">Sign up</a>
+            <a class="navbar-link" href="/login">Log in</a> |
+            <a class="navbar-link" href="/users/new">Sign up</a>
           {{/if}}
         </div>
       </div>
