@@ -2,19 +2,31 @@ const express = require('express');
 const router = express.Router({mergeParams: true});
 const auth = require('./helpers/auth');
 const Trip = require('../models/trip');
+const Event = require('../models/event');
 
-// Posts new
+// Event new
 router.get('/new', auth.requireLogin, (req, res, next) => {
-<<<<<<< HEAD
+  Trip.findById(req.params.roomId, function(err, room) {
+    if(err) { console.error(err) };
 
-=======
-  
->>>>>>> 1f41df01b65fc8298392c67fb4a8b153d9ec6b83
+    res.render('events/new', { trip: trip });
+  });
 });
 
 // Posts create
 router.post('/', auth.requireLogin, (req, res, next) => {
-  // TODO
+  Trip.findById(req.params.roomId, function(err, room) {
+    if(err) { console.error(err) };
+
+    let event = new Event(req.desc);
+    event.trip = trip;
+
+    event.save(function(err, event) {
+      if(err) { console.error(err) };
+
+      return res.redirect(`/trips/${trip._id}`);
+    });
+  });
 })
 
 module.exports = router;
