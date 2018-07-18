@@ -6,12 +6,8 @@ const Event = require('../models/event');
 
 // Event new
 router.get('/new', auth.requireLogin, (req, res, next) => {
-<<<<<<< HEAD
 
   Trip.findById(req.params.tripId, function(err, trip) {
-=======
-  Trip.findById(req.params.roomId, function(err, room) {
->>>>>>> 002168fe8fb8fdbfc69da915b053da6ee237ec69
     if(err) { console.error(err) };
 
     res.render('events/new', { trip: trip });
