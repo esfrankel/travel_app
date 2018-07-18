@@ -133,22 +133,28 @@ h2 {
   color: white;
 }
 
-.trips.summary p {
-  font-family: 'Playfair Display';
-  font-size: 20px;
+h3.trips-name {
+  font-family: Bitter;
+  font-weight: bold;
+  letter-spacing: 3px;
+  font-size: 40px;
+}
+
+a.trips-link {
+  font-family: 'Josefin Sans';
 }
 
 a.trips-link:visited {
   color: blue;
 }
 a.trips-link:link {
-  color: white;
+  color: #FFCC00;
 }
 a.trips-link:active {
   color: green;
 }
 a.trips-link:hover {
-  color:  #FFCC00;
+  color: white;
   text-decoration: none;
 }
 
@@ -158,4 +164,8 @@ a.trips-link:hover {
   color: black;
   width: 15%;
   font-family: 'Open Sans';
+}
+
+#btn-newtrip:hover {
+  color: white;
 }
