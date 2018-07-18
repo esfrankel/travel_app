@@ -3,10 +3,11 @@ const router = express.Router();
 
 const auth = require('./helpers/auth');
 const Trip = require('../models/trip');
-const Event = require('../models/event');
+const Event_Test = require('../models/event');
 const events = require('./events');
 
-router.get('/', (req, res, next) => {
+
+router.get('/', auth.requireLogin, (req, res, next) => {
   Trip.find({}, function(err, trips) {
     if (err) {
       console.error(err);
@@ -17,24 +18,23 @@ router.get('/', (req, res, next) => {
   });
 });
 
-router.get('/new', (req, res, next) =>{
-  res.render('trips/new')
-})
+router.get('/new', auth.requireLogin, (req, res, next) =>{
+  res.render('trips/new');
+});
 
-router.get('/:id', (req, res, next) => {
+router.get('/:id', auth.requireLogin, (req, res, next) => {
   Trip.findById(req.params.id, function(err, trip) {
-    if (err) { console.error(err); }
+    if(err) { console.error(err) };
 
-    Event.find({ trip: trip })
-      .populate('events')
+    Event_Test.find({ trip: trip })
       .exec(function(err, events) {
-        if (err) { console.error(err); }
-        res.render('trips/show', { trip: trip, events: events, tripId: req.params.id });
-      });
+        if(err) { console.error(err) };
+      res.render('trips/show', { trip: trip, events: events, tripId: req.params.id });
+    });
   });
 });
 
-router.get('/:id/edit', (req, res, next) => {
+router.get('/:id/edit', auth.requireLogin, (req, res, next) => {
   Trip.findById(req.params.id, function(err, trip) {
     if (err) { console.error(err); }
 
@@ -42,7 +42,7 @@ router.get('/:id/edit', (req, res, next) => {
   })
 })
 
-router.post('/:id', (req, res, next) => {
+router.post('/:id', auth.requireLogin, (req, res, next) => {
   Trip.findByIdAndUpdate(req.params.id, req.body, function(err, trip) {
     if (err) { console.error(err); }
 
@@ -50,7 +50,7 @@ router.post('/:id', (req, res, next) => {
   })
 })
 
-router.post('/', (req, res, next) => {
+router.post('/', auth.requireLogin, (req, res, next) => {
   let trip = new Trip(req.body);
 
   trip.save(function(err, trip) {
