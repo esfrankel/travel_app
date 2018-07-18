@@ -18,7 +18,7 @@ router.post('/', auth.requireLogin, (req, res, next) => {
   Trip.findById(req.params.roomId, function(err, room) {
     if(err) { console.error(err) };
 
-    let event = new Event(req.desc);
+    let event = new Event(req.body);
     event.trip = trip;
 
     event.save(function(err, event) {
