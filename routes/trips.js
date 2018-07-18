@@ -4,6 +4,7 @@ const router = express.Router();
 const auth = require('./helpers/auth');
 const Trip = require('../models/trip');
 const Event = require('../models/event');
+const events = require('./events');
 
 router.get('/', (req, res, next) => {
   Trip.find({}, function(err, trips) {
@@ -60,6 +61,6 @@ router.post('/', (req, res, next) => {
   });
 });
 
-router.use('/:tripId/trips', trips)
+router.use('/:tripId/events', events)
 
 module.exports = router;
