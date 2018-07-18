@@ -35,9 +35,24 @@
   letter-spacing: 5px;
 }
 
+.left-nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+  margin-left: -5px;
+  background-color: #f8f9fa;
+  background-blend-mode: screen;
+}
+
 .navbar-brand {
   font-family: 'Markazi Text' !important;
-  font-size: 25px !important;
+  font-size: 30px !important;
+  margin-left: 10px;
 }
 
 .navbar-text {
