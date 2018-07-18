@@ -9,25 +9,27 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <title>WanderList</title>
-    <link rel="stylesheet" href="../public/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="/">
-        WanderList
-      </a>
 
-      <div class="navbar-text">
-        {{# if currentUserId}}
-          <a class="navbar-link" href="/logout">Log out</a>
-        {{else}}
-          <p>
-            <a class="navbar-link" href="/login">Log in</a> |
-            <a class="navbar-link" href="/users/new">Sign up</a>
-          {{/if}}
-          </p>
+    <nav class="navbar navbar-static-top navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid ">
+        <a class="navbar-brand" href="/">
+          WanderList
+        </a>
 
+        <div class="navbar-text">
+          {{# if currentUserId}}
+            <a class="navbar-link" href="/logout">Log out</a>
+          {{else}}
+            <p>
+              <a class="navbar-link" href="/login">Log in</a> |
+              <a class="navbar-link" href="/users/new">Sign up</a>
+            {{/if}}
+            </p>
+        </div>
       </div>
     </nav>
 

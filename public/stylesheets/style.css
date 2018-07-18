@@ -6,7 +6,7 @@ body {
 .main {
   background-color: #F0F8FF;
   padding: 140px 0px 100px;
-  background-image: url("../../img/landing-page-background.jpg");
+  background-image: url("/img/landing-page-background.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -15,7 +15,11 @@ body {
 .nav-item {
   display: flex;
   justify-content: flex-end;
-  text-align: center;
+  align-items: center;
+}
+
+nav {
+  width: 100%;
 }
 
 a {
