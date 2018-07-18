@@ -157,7 +157,7 @@ a.trips-link {
 }
 
 a.trips-link:visited {
-  color: black;
+  color: #FFCC00 !important;
 }
 a.trips-link:link {
   color: #FFCC00;
@@ -193,10 +193,10 @@ h3 {
 }
 
 a.addevent:visited {
-  color: #CC3333;
+  color: #CC3333 !important;
 }
 a.addevent:link {
-  color: #FFCC00;
+  color: #CC3333;
 }
 a.addevent:active {
   color: green;
