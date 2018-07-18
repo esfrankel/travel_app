@@ -1,3 +1,15 @@
+.login {
+  display: flex;
+  align-items: center;
+}
+
+.login-label {
+  display: flex;
+  justify-content: center;
+}
+
+
+
 .section.header {
   position: relative;
   background: #5C97FF;
