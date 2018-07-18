@@ -1,19 +1,22 @@
-<h1> Trip name </h1>
+<div class="row justify-content-center">
+  <h1>{{trip.name}}</h1>
+</div>
+<div class="row justify-content-center">
+  <h2>{{trip.desc}}</h2>
+</div>
+<div class="row justify-content-center">
+  <h3>Add a new event <a href="/trips/{{trip.id}}/events/new">here</a>.</h3>
+</div>
 
-<div class="events-body">
-  {{#each events}}
-      <div class="col-12 col-md-6 col-lg-4">
-          <div class="events">
-              <div class="card-header text-muted">
-                  THIS IS A TRIP
-              </div>
-              <div class="card-body">
-                  <h4 class="card-title">{{trips.name}}</h4>
-                  <h3 class="card-title">{{trips.desc}}</h3>
-                  <p class="card-text">{{trips.events}}</p>
-                  <a class="card-link" href="/trips/{{this._id}}">Read More</a>
-              </div>
-          </div>
+<div class="row justify-content-center">
+  <div class="col-8">
+    {{#each events as |event|}}
+      <div class="card mb-3">
+        <div class="card-body">
+          <h3 class="card-title text-center">{{event.name}}</h3>
+          <p>{{event.desc}}</p>
+        </div>
       </div>
-  {{/each}}
+    {{/each}}
+  </div>
 </div>

@@ -19,7 +19,7 @@ router.get('/', (req, res, next) => {
 
 router.get('/new', (req, res, next) =>{
   res.render('trips/new')
-})
+});
 
 router.get('/:id', (req, res, next) => {
   Trip.findById(req.params.id, function(err, trip) {
