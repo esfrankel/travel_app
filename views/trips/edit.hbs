@@ -1,0 +1,16 @@
+<div>
+  <form action="/trips/{{trip.id}}" method="post">
+    <legend>Edit Trip</legend>
+    <div class="form-group">
+      <label for="trip-name">Name</label>
+      <input type="text" name="name" class="form-control" id="trip-name" value="{{trip.name}}">
+    </div>
+    <div class="form-group">
+      <label for="trip-desc">Description</label>
+      <input type="text" name="desc" class="form-control" id="trip-desc" value="{{trip.desc}}">
+    </div>
+    <div class="text-right">
+      <button type="submit" name="btn btn-primary">Submit</button>
+    </div>
+  </form>
+</div>
