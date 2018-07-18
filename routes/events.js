@@ -6,19 +6,13 @@ const Event = require('../models/event');
 
 // Event new
 router.get('/new', auth.requireLogin, (req, res, next) => {
-<<<<<<< HEAD
-=======
 
->>>>>>> 443440dc5aad84fde78d322c0acaaada2b3c573d
   Trip.findById(req.params.roomId, function(err, room) {
     if(err) { console.error(err) };
 
     res.render('events/new', { trip: trip });
   });
-<<<<<<< HEAD
-=======
 
->>>>>>> 443440dc5aad84fde78d322c0acaaada2b3c573d
 });
 
 // Posts create
