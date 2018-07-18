@@ -59,3 +59,17 @@
   font-family: 'Markazi Text' !important;
   font-size: 25px !important;
 }
+
+.section.second {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 100px 0;
+}
+
+li.list-item {
+  padding: 30px 130px;
+  margin: 10px;
+  list-style-type: none;
+  border: 1px solid black;
+}
