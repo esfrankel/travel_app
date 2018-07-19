@@ -9,9 +9,9 @@
 
   <div class="trips-body">
     {{#each trips}}
-      <div class="trips summary">
+      <div class="content trips summary">
         <h3 class="trips-name">{{this.name}}</h3>
-        <p class="trips-events">{{this.events}}</p>
+        <!-- <p class="trips-events">{{this.events}}</p> -->
         <a class="trips-link" href="/trips/{{this._id}}">Read More</a>
         </div>
     {{/each}}
