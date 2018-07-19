@@ -44,7 +44,7 @@ router.get('/logout', (req, res, next) => {
       if (err) return next(err);
     });
   }
-  return res.redirect('/login');
+  return res.redirect('/');
 });
 
 module.exports = router;
