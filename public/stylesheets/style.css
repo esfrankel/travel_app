@@ -85,10 +85,26 @@
 }
 
 li.list-item {
-  padding: 40px 130px;
+  padding: 30px 100px;
   margin: 10px;
   list-style-type: none;
-  border: 1px solid black;
+  border-radius: 25px;
+  font-family: 'Slabo 27px';
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+li.item1, li.item3 {
+  border: 1px solid #CC3333;
+  background-color: #CC3333;
+  color: white;
+}
+
+li.item2, li.item4 {
+  border: 1px solid #FFCC00;
+  background-color: #FFCC00;
+  color: black;
 }
 
 li.list-item-img {
