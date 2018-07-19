@@ -1,3 +1,7 @@
+@font-face {
+  font-family: header-font; src: url('/Good Vibes.ttf');
+}
+
 .login {
   display: flex;
   align-items: center;
@@ -17,7 +21,8 @@
 
 .section.header {
   position: relative;
-  background: #5C97FF;
+  /* background: #c5a289; */
+  /* opacity: 1; */
   overflow: hidden;
   padding: 200px;
 }
@@ -35,14 +40,14 @@
   width: 100%;
   height: 100%;
   z-index: 1;
-  opacity: 0.6;
+  /* opacity: 0.6; */
 
   padding: 200px;
   background-image: url("../img/landing-page-background.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  opacity: 0.6;
+  opacity: 0.9;
 }
 
 .section.header h1 {
@@ -50,10 +55,11 @@
   z-index: 2;
   position: relative;
 
-  color: white;
-  font-family: Lobster;
-  font-size: 80px;
-  letter-spacing: 5px;
+  color: black;
+  font-family: 'header-font';
+  font-size: 140px;
+  letter-spacing: 8px;
+  /* margin-bottom: 10px; */
 }
 
 #newtrip-btn {
