@@ -8,17 +8,15 @@
   </a></h3>
 </div>
 
-<div class="row justify-content-center">
-  <div class="col-8">
-    {{#each events as |event|}}
-      <div class="card mb-3">
-        <div class="card-body">
-          <h3 class="event-name card-title text-center">{{event.name}}</h3>
-          <p class="card-text">Date: {{event.date}}</p>
-          <p class="card-text">Time: {{event.time}}</p>
-          <p class="card-text">Price: {{event.price}}</p>
-        </div>
-      </div>
-    {{/each}}
+<div class="events-body">
+  {{#each events as |event|}}
+  <div class="content events summary">
+    <h3 class="event-name">{{event.name}}</h3>
+    <div class="event-stuff">
+      <p class="eventstuff event-date">Date: {{event.date}}</p>
+      <p class="eventstuff event-time">Time: {{event.time}}</p>
+      <p class="eventstuff event-price">Price: {{event.price}}</p>
+    </div>
   </div>
+  {{/each}}
 </div>

@@ -143,14 +143,14 @@ h2 {
   align-items: center;
 }
 
-.trips-body {
+.trips-body, .events-body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
 }
 
-.trips.summary {
+.trips.summary, .events.summary {
   border: 1px solid black;
   border-radius: 5px;
   border: 2px solid #CC3333;
@@ -180,9 +180,13 @@ h3.event-name {
   font-size: 30px;
 }
 
-a.trips-link {
+a.trips-link, .event-stuff {
   font-family: 'Josefin Sans';
   font-size: 18px;
+}
+
+.eventstuff {
+  margin: 1px;
 }
 
 a.trips-link:visited {
