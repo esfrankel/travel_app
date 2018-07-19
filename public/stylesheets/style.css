@@ -128,7 +128,7 @@
 }
 
 a.navbar-link:hover {
-  color: #a06455 !important;
+  color: #720b0b !important;
   text-decoration: none;
 }
 
@@ -152,8 +152,8 @@ li.list-item {
 }
 
 li.item1, li.item3 {
-  border: 1px solid #a06455;
-  background-color: #a06455;
+  border: 1px solid #680707;
+  background-color: #680707;
   color: white;
 }
 
@@ -203,8 +203,8 @@ h2 {
 .trips.summary, .events.summary {
   border: 1px solid black;
   border-radius: 5px;
-  border: 2px solid #a06455;
-  background-color: #a06455;
+  border: 2px solid #680707;
+  background-color: #680707;
   padding: 10px 0;
   margin: 2%;
   height: 11em;
@@ -237,6 +237,7 @@ a.trips-link, .event-stuff {
 
 .eventstuff {
   margin: 1px;
+  color: #FFE9D0;
 }
 
 a.trips-link:visited {
@@ -245,11 +246,9 @@ a.trips-link:visited {
 a.trips-link:link {
   color: #FFCC00;
 }
-a.trips-link:active {
-  color: green;
-}
 a.trips-link:hover {
-  color: #640000 !important;
+  font-size: 20px;
+  margin-top: -4px;
   text-decoration: none;
   font-weight: bold;
 }
