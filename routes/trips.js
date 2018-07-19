@@ -8,15 +8,12 @@ const events = require('./events');
 const User = require('../models/user');
 
 
-
-
 router.get('/', auth.requireLogin, (req, res, next) => {
-  Trip.find({}, function(err, trips) {
+  Trip.find({users: res.locals.currentUserId}, function(err, trips) {
     if (err) {
       console.error(err);
     }
-
-    console.log(trips);
+    console.log(res.locals.currentUserId);
     res.render('trips/index', { trips: trips });
   });
 });
@@ -62,11 +59,10 @@ router.post('/:id', auth.requireLogin, (req, res, next) => {
 router.post('/', auth.requireLogin, (req, res, next) => {
   let trip = new Trip(req.body);
 
+  trip.users.push(req.session.userId);
   trip.save(function(err, trip) {
-    if (err) {
-      console.error(err);
-    }
-    return res.redirect('/trips');
+    if (err) { console.error(err);}
+    return res.redirect('/trips')
   });
 });
 
