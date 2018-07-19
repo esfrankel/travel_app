@@ -7,9 +7,15 @@ const Event_Test = require('../models/event');
 const events = require('./events');
 const User = require('../models/user');
 
+router.delete('/', auth.requireLogin, (req, res, next) => {
+  Trip.findByIdAndRemove(req.body.delete_id, function(err, trip) {
+    if (err) { console.error(err); }
+    res.redirect('/trips');
+  });
+});
 
 router.get('/', auth.requireLogin, (req, res, next) => {
-  Trip.find({users: res.locals.currentUserId}).populate('events').exec(function(err, trips) {
+  Trip.find({users: res.locals.currentUserId}).populate('events').sort({ date: -1}).exec(function(err, trips) {
     if (err) {
       console.error(err);
     }
@@ -54,7 +60,6 @@ router.post('/:id', auth.requireLogin, (req, res, next) => {
     res.redirect('/trips/' + req.params.id);
   });
 });
-
 
 router.post('/', auth.requireLogin, (req, res, next) => {
   const trip = new Trip(req.body);
