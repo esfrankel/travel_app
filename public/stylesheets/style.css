@@ -191,15 +191,15 @@ a.trips-link:hover {
   text-decoration: none;
 }
 
-#btn-newtrip {
+#btn-newtrip, a.addevent {
   border-color: #FFCC00;
   background-color: #FFCC00;
   color: black;
-  width: 15%;
   font-family: 'Josefin Sans';
 }
 
-#btn-newtrip:hover {
+#btn-newtrip:hover,
+a.addevent:hover {
   color: white;
 }
 
@@ -212,18 +212,4 @@ a.trips-link:hover {
 
 h3 {
   font-family: 'Josefin Sans';
-}
-
-a.addevent:visited {
-  color: #CC3333 !important;
-}
-a.addevent:link {
-  color: #CC3333;
-}
-a.addevent:active {
-  color: green;
-}
-a.addevent:hover {
-  color: #FFCC00;
-  text-decoration: none;
 }
