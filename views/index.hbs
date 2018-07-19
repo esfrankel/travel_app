@@ -1,6 +1,13 @@
 <header>
   <div class="section header">
     <h1>WanderList</h1>
+    <div class="section newtrip-btn">
+      {{# if currentUserId}}
+      <a href="/trips/new" class="btn btn-default" id="newtrip-btn">
+        Create a new trip!
+      </a>
+      {{/if}}
+    </div>
   </div>
 
   <div class="section second">
