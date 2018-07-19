@@ -9,12 +9,13 @@ const User = require('../models/user');
 
 
 router.get('/', auth.requireLogin, (req, res, next) => {
-  Trip.find({users: res.locals.currentUserId}, function(err, trips) {
+  Trip.find({users: res.locals.currentUserId}.populate('events').exec(function(err, trips) {
     if (err) {
       console.error(err);
     }
     console.log(res.locals.currentUserId);
     res.render('trips/index', { trips: trips });
+    });
   });
 });
 
