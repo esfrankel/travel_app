@@ -9,12 +9,11 @@ const User = require('../models/user');
 
 
 router.get('/', auth.requireLogin, (req, res, next) => {
-  Trip.find({}, function(err, trips) {
+  Trip.find({users: res.locals.currentUserId}, function(err, trips) {
     if (err) {
       console.error(err);
     }
-
-    console.log(trips);
+    console.log(res.locals.currentUserId);
     res.render('trips/index', { trips: trips });
   });
 });
@@ -56,24 +55,12 @@ router.post('/:id', auth.requireLogin, (req, res, next) => {
 })
 
 router.post('/', auth.requireLogin, (req, res, next) => {
-  User.findById(req.params.userId, function(err, user) {
-    if (err) {console.error(err);}
+  let trip = new Trip(req.body);
 
-    let trip = new Trip(req.body);
-    trip.users.push(req.session.userId);
-    const regex = /(\b\w*\b)/;
-    let usernames = req.body.share.match(regex);
-    for (var username in usernames) {
-      User.find({ username: username}, function(err, found_user) {
-        if (err) { continue; }
-        trip.users.push(found_user);
-      });
-    }
-
-    trip.save(function(err, trip) {
-      if (err) { console.error(err);}
-      return res.redirect('/trips')
-    });
+  trip.users.push(req.session.userId);
+  trip.save(function(err, trip) {
+    if (err) { console.error(err);}
+    return res.redirect('/trips')
   });
 });
 
