@@ -13,7 +13,6 @@ router.get('/', auth.requireLogin, (req, res, next) => {
     if (err) {
       console.error(err);
     }
-    console.log(res.locals.currentUserId);
     res.render('trips/index', { trips: trips });
   });
 });
@@ -57,13 +56,43 @@ router.post('/:id', auth.requireLogin, (req, res, next) => {
 
 
 router.post('/', auth.requireLogin, (req, res, next) => {
-  let trip = new Trip(req.body);
+  const trip = new Trip(req.body);
 
   trip.users.push(req.session.userId);
-  trip.save(function(err, trip) {
-    if (err) { console.error(err);}
-    return res.redirect('/trips')
+
+  const usernames = req.body.share.split(", ");
+
+  console.log(usernames);
+
+  // Promise.all([p,p,p]).then().catch()
+  const findUsers = [];
+
+  for (let i = 0; i < usernames.length; i += 1) {
+    const username = usernames[i];
+    const user = User.findOne({ username });
+    // User.find({username: username}, function(error, friend) {
+    //   trip.users.push(friend[0]._id);
+    // });
+  }
+
+  Promise.all(findUsers).then((users) => {
+    for (let i = 0; i < users.length; i += 1) {
+      if (users[i] !== null) {
+        trip.users.push(users[i]);
+      }
+    }
+    return trip.save();
+  }).then((trip) => {
+    return res.redirect('/trips');
+  }).catch((err) => {
+    console.log(err.message);
   });
+
+  // trip.save(function(err, trip) {
+  //   console.log(trip);
+  //   if (err) { console.error(err);}
+  //   return res.redirect('/trips')
+  // });
 });
 
 router.use('/:tripId/events', events)
