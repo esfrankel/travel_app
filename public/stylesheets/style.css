@@ -68,6 +68,7 @@
   margin-left: -5px;
   background-color: #f8f9fa;
   background-blend-mode: screen;
+  border-radius: 50%;
 }
 
 .navbar-brand {
@@ -151,13 +152,13 @@ h2 {
 
 .trips.summary {
   border: 1px solid black;
-  border-radius: 25px;
+  border-radius: 5px;
   border: 2px solid #CC3333;
   background-color: #CC3333;
   padding: 10px 0;
-  margin: 1.5%;
+  margin: 2%;
   height: 11em;
-  width: 30%;
+  width: 25%;
   text-align: center;
   color: white;
   display: flex;
@@ -171,6 +172,12 @@ h3.trips-name {
   font-weight: bold;
   letter-spacing: 3px;
   font-size: 40px;
+}
+
+h3.event-name {
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 30px;
 }
 
 a.trips-link {

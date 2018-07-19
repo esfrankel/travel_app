@@ -31,6 +31,7 @@ router.get('/:id', auth.requireLogin, (req, res, next) => {
     if(err) { console.error(err) };
 
     Event_Test.find({ trip: trip })
+      .sort({ _id:-1})
       .exec(function(err, events) {
         if(err) { console.error(err) };
       res.render('trips/show', { trip: trip, events: events, tripId: req.params.id });

@@ -3,16 +3,11 @@
     <div class = "col-12 col-md-8 col-lg-4">
       <form action="/trips/{{trip.id}}/events" method="post">
 
-        <h2 class="login-label">New Event</h2>
+        <h2 class="login-label">New Experience</h2>
 
         <div class="form-group">
-          <label for="event-title" class="newevent">Event Name</label>
-          <input type="text" name="name" class="form-control" id="event-title" placeholder="e.g. Eiffel Tower" required minlength="1">
-        </div>
-
-        <div class="form-group">
-          <label for="event-desc" class="newevent">Description</label>
-          <input type="text" name="desc" class="form-control" id="event-desc" required minlength="1">
+          <label for="event-title" class="newevent">What do you want to do?</label>
+          <input type="text" name="name" class="form-control" id="event-title" placeholder="e.g. Ride a bike around the city" required minlength="1">
         </div>
 
         <div class="form-group">
@@ -23,11 +18,6 @@
         <div class="form-group">
           <label for="event-time" class="newevent">Time</label>
           <input type="text" name="time" class="form-control" id="event-time" placeholder="Optional">
-        </div>
-
-        <div class="form-group">
-          <label for="event-location" class="newevent">Location</label>
-          <input type="text" name="loc" class="form-control" id="event-location" placeholder="Optional">
         </div>
 
         <div class="form-group">
