@@ -13,7 +13,7 @@ router.get('/', auth.requireLogin, (req, res, next) => {
     if (err) {
       console.error(err);
     }
-    res.render('trips/index', { trips: trips });
+    res.render('trips/index', { trips: trips, events: events });
   });
 });
 
