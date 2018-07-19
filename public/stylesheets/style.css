@@ -243,3 +243,12 @@ a.addevent:hover {
 h3 {
   font-family: 'Josefin Sans';
 }
+
+#trash {
+  padding-top: 5px;
+  color: #FFCC00 !important;
+}
+
+#trash:hover {
+  color: #808080 !important;
+}
