@@ -8,7 +8,6 @@
   </a>
 
   <div class="trips-body">
-<<<<<<< HEAD
     {{#each trips as |trip|}}
       <div class="trips summary">
         <h3 class="trips-name">{{trip.name}}</h3>
@@ -17,15 +16,8 @@
               {{event.name}}
             </p>
           {{/each}}
-=======
-    {{#each trips}}
-      <div class="content trips summary">
-        <h3 class="trips-name">{{this.name}}</h3>
-        <!-- <p class="trips-events">{{this.events}}</p> -->
->>>>>>> 134224f27611dea333195536ea7233bd3a0789b8
         <a class="trips-link" href="/trips/{{this._id}}">Read More</a>
-        <i class="fa fa-trash" aria-hidden="true"></i>
-      </div>
+        </div>
     {{/each}}
 
   </div>
