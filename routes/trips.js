@@ -52,8 +52,8 @@ router.post('/:id', auth.requireLogin, (req, res, next) => {
     if (err) { console.error(err); }
 
     res.redirect('/trips/' + req.params.id);
-  })
-})
+  });
+});
 
 
 router.post('/', auth.requireLogin, (req, res, next) => {
