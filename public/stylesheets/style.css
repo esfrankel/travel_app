@@ -247,6 +247,8 @@ h3 {
 #trash {
   padding-top: 5px;
   color: #FFCC00 !important;
+  background-color:inherit !important;
+  border-color: none !important;
 }
 
 #trash:hover {
