@@ -97,6 +97,7 @@ li.list-item {
   font-size: 20px;
   display: flex;
   flex-direction: column;
+  font-weight: bold;
 }
 
 li.item1, li.item3 {
@@ -113,7 +114,7 @@ li.item2, li.item4 {
 
 li.list-item-img {
   list-style-type: none;
-  margin: 20px 0 20px 80px;
+  margin: 10px 0 15px 80px;
 }
 
 .section.left {
@@ -187,7 +188,7 @@ a.trips-link:active {
   color: green;
 }
 a.trips-link:hover {
-  color: white;
+  color: white !important;
   text-decoration: none;
 }
 
