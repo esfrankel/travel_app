@@ -1,9 +1,11 @@
 <div class="row justify-content-center">
-  <h2>{{trip.name}}</h2>
+  <h2>My Trip: {{trip.name}}</h2>
 </div>
 
 <div class="row justify-content-center">
-  <h3>Add a new event <a class="addevent" href="/trips/{{trip.id}}/events/new">here</a>!</h3>
+  <h3><a href="/trips/{{trip.id}}/events/new" class="btn btn-default addevent">
+    Add a new event
+  </a></h3>
 </div>
 
 <div class="row justify-content-center">
