@@ -19,6 +19,7 @@
   position: relative;
   background: #5C97FF;
   overflow: hidden;
+  padding: 200px;
 }
 
 ::placeholder {
@@ -45,7 +46,6 @@
 }
 
 .section.header h1 {
-  padding: 200px;
   text-align: center;
   z-index: 2;
   position: relative;
@@ -54,6 +54,23 @@
   font-family: Lobster;
   font-size: 80px;
   letter-spacing: 5px;
+}
+
+#newtrip-btn {
+  border-color: black;
+  background-color: black;
+  color: white;
+  font-family: 'trueno';
+  font-weight: bold;
+  margin: 10px 0;
+  text-align: center;
+  z-index: 2;
+  position: relative;
+}
+
+.section.newtrip-btn {
+  display: flex;
+  justify-content: center;
 }
 
 .left-nav {
@@ -143,14 +160,14 @@ h2 {
   align-items: center;
 }
 
-.trips-body {
+.trips-body, .events-body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
 }
 
-.trips.summary {
+.trips.summary, .events.summary {
   border: 1px solid black;
   border-radius: 5px;
   border: 2px solid #CC3333;
@@ -180,9 +197,13 @@ h3.event-name {
   font-size: 30px;
 }
 
-a.trips-link {
+a.trips-link, .event-stuff {
   font-family: 'Josefin Sans';
   font-size: 18px;
+}
+
+.eventstuff {
+  margin: 1px;
 }
 
 a.trips-link:visited {

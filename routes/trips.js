@@ -63,14 +63,13 @@ router.post('/', auth.requireLogin, (req, res, next) => {
 
   const usernames = req.body.share.split(", ");
 
-  console.log(usernames);
-
   // Promise.all([p,p,p]).then().catch()
   const findUsers = [];
 
   for (let i = 0; i < usernames.length; i += 1) {
     const username = usernames[i];
     const user = User.findOne({ username });
+    findUsers.push(user);
     // User.find({username: username}, function(error, friend) {
     //   trip.users.push(friend[0]._id);
     // });
@@ -84,6 +83,7 @@ router.post('/', auth.requireLogin, (req, res, next) => {
     }
     return trip.save();
   }).then((trip) => {
+    console.log(trip);
     return res.redirect('/trips');
   }).catch((err) => {
     console.log(err.message);
