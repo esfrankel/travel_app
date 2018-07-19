@@ -204,6 +204,7 @@ a.trips-link:hover {
   background-color: #FFCC00;
   color: black;
   font-family: 'Josefin Sans';
+  margin-bottom:10px;
 }
 
 #btn-newtrip:hover,
