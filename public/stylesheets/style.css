@@ -21,6 +21,10 @@
   overflow: hidden;
 }
 
+::placeholder {
+  font-family: trueno;
+}
+
 .section.header:before {
   content: ' ';
   display: block;
@@ -89,7 +93,7 @@ li.list-item {
   margin: 10px;
   list-style-type: none;
   border-radius: 25px;
-  font-family: 'Slabo 27px';
+  font-family: trueno;
   font-size: 20px;
   display: flex;
   flex-direction: column;
