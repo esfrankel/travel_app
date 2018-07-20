@@ -25,3 +25,36 @@
   </div>
 
 </div>
+
+<script>
+function eventGet(){
+  const events = document.querySelectorAll('.event-name');
+
+  for(let i = 0; i < events.length; i++){
+    lengthCheck(events[i])
+  }
+
+};
+
+function lengthCheck(obj){
+  const $numWords = obj.textContent.length
+
+  if (($numWords >= 1) && ($numWords < 10)) {
+    obj.style.fontSize = "40px"
+  }
+  else if (($numWords >= 10) && ($numWords < 20)) {
+    obj.style.fontSize = "32px"
+  }
+  else if (($numWords >= 20) && ($numWords < 30)) {
+    obj.style.fontSize = "22px"
+  }
+  else if (($numWords >= 30) && ($numWords < 70)) {
+    obj.style.fontSize = "17px"
+  }
+  else {
+    obj.style.fontSize = "10px"
+  }
+}
+
+eventGet();
+</script>
