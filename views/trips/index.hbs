@@ -8,7 +8,6 @@
   </a>
 
   <div class="trips-body">
-<<<<<<< HEAD
     {{#each trips as |trip|}}
     <div class="trips summary">
       <h3 class="trips-name">{{trip.name}}</h3>
@@ -17,20 +16,19 @@
         {{event.name}}
       </p>
       {{/each}}
+
+      <script>
+        function ConfirmDelete()
+        {
+          confirm("Are you sure you want to delete?");
+        }
+      </script>
       <a class="trips-link" href="/trips/{{this._id}}">My Events</a>
       <form class="form" method="POST" action="/trips?_method=DELETE">
-        <input style="visibility: hidden; margin:-90px;" name="delete_id" value="{{this._id}}">
-        <button class="btn" id="trash"><i class="fa fa-trash"></i></button>
+        <input style="visibility: hidden; margin:-90px;" name="delete_id" value="{{this._id}}" >
+        <button class="btn" id="trash" Onclick="ConfirmDelete()"><i class="fa fa-trash"></i> </button>
       </form>
     </div>
-=======
-    {{#each trips}}
-      <div class="trips summary">
-        <h3 class="trips-name">{{this.name}}</h3>
-        <p class="trips-events">{{this.events}}</p>
-        <a class="trips-link" href="/trips/{{this._id}}">Read More</a>
-      </div>
->>>>>>> will
     {{/each}}
   </div>
 
