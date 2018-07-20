@@ -17,7 +17,12 @@
       </p>
       {{/each}}
 
+      <h4 class="duration">
+        <span class="datefrom tripdate">{{trip.datefrom}}</span> -
+        <span class="dateto tripdate">{{trip.dateto}}</span></h4>
+
       <a class="trips-link" href="/trips/{{this._id}}">My Events</a>
+
       <form class="form" method="POST" action="/trips?_method=DELETE">
         <input style="visibility: hidden; margin:-90px;" name="delete_id" value="{{this._id}}" >
         <button class="btn" id="trash" Onclick="return confirm('Are you sure you want to delete this trip?');"><i class="fa fa-trash"></i> </button>
@@ -28,11 +33,24 @@
 </div>
 
 <script>
+function dateGet(){
+  const dates = document.querySelectorAll('.tripdate');
+
+  for(let i=0; i<dates.length; i++){
+    const date = new Date(dates[i].textContent).toLocaleDateString();
+    // TODO: please fix this, future Beverly
+    if(date !== "Invalid Date"){
+      dates[i].innerHTML = date
+    }
+  }
+};
+
 function tripGet(){
   const trips = document.querySelectorAll('.trips-name');
 
   for(let i = 0; i < trips.length; i++){
     lengthCheck(trips[i])
+
   }
 
 };
@@ -58,4 +76,5 @@ function lengthCheck(obj){
 }
 
 tripGet();
+dateGet();
 </script>

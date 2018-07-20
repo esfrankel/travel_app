@@ -226,7 +226,7 @@ h2 {
   background-color: #680707;
   padding: 10px 0;
   margin: 2%;
-  height: 11em;
+  height: 13em;
   width: 25%;
   text-align: center;
   color: white;
@@ -333,11 +333,17 @@ a.addevent:hover {
               line-height 0.1s ease-in;
 }
 
-#trip-title, #trip-share,
+#trip-title, #trip-share, #trip-duration,
 .newevent,
 #user-username, #user-password {
   font-family: 'Lato';
   font-size: 20px;
+}
+
+.small-to {
+  font-family: 'Lato';
+  font-size: 15px;
+  margin: 5px 0;
 }
 
 .new-trip-stuff, .new-event-stuff {
@@ -352,7 +358,24 @@ a.addevent:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+}
+
+#date1, #date2 {
+  width: 205%;
+  margin: auto;
+
+}
+
+.duration {
+  color: #f9dfd9;
+  font-size: 15px;
+  margin: auto;
+  letter-spacing: 2px;
+}
+
+.trip-duration {
+  display: flex;
+  justify-content: flex-start;
 }
 
 h3 {
