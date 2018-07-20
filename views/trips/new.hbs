@@ -1,23 +1,23 @@
-<div class="container">
-  <div class="row align-items-center justify-content-center ">
-    <div class = "col-12 col-md-8 col-lg-4">
-      <form action="/trips" method="post">
-        <h2 class="login-label">New Trip</h2>
+<form action="/trips" method="post">
 
-        <div class="form-group">
-          <label for="trip-title" id="trip-title">Trip Name</label>
-          <input type="text" name="name" class="form-control" placeholder="e.g. Japan" required minlength="1" maxlength="45">
-        </div>
+  <div class="container-fluid">
+    <div class="new-trip-content section trip-header">
+      <h2 class="login-label">New Trip</h2>
 
-        <div class="form-group">
-          <label for="trip-share" id="trip-share">I'd like to share this trip with...</label>
-          <input type="text" name="share" class="form-control" placeholder="Insert Username">
-        </div>
+      <div class="form-group">
+        <label for="trip-title" id="trip-title">Trip Name</label>
+        <input type="text" name="name" class="form-control" placeholder="e.g. Japan" required minlength="1" maxlength="45">
+      </div>
 
-        <div class="text-center">
-          <button type="submit" class="btn submit-button btn-primary">Create</button>
-        </div>
-      </form>
+      <div class="form-group">
+        <label for="trip-share" id="trip-share">I'd like to share this trip with...</label>
+        <input type="text" name="share" class="form-control" placeholder="Insert Username">
+      </div>
+
+      <div class="text-center">
+        <button type="submit" class="btn submit-button btn-primary">Create</button>
+      </div>
     </div>
   </div>
-</div>
+
+</form>
