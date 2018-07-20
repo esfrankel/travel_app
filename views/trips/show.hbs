@@ -16,6 +16,10 @@
         <p class="eventstuff event-time">Time: {{event.time}}</p>
         <p class="eventstuff event-price">Price: {{event.price}}</p>
       </div>
+      <form class="form" method="POST" action="/events?_method=DELETE">
+        <input style="visibility: hidden; margin:-90px;" name="delete_id" value="{{this._id}}" >
+        <button class="btn" id="trash" Onclick="ConfirmDelete()"><i class="fa fa-trash"></i> </button>
+      </form>
     </div>
     {{/each}}
   </div>
