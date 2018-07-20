@@ -25,6 +25,20 @@
         <input type="text" name="price" class="form-control" id="event-price" value="$" autocomplete="off">
       </div>
 
+      <div class="form-group">
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEgWq5G822EXJIgfviFqJRf7vVE6_F5Lc&sensor=false&libraries=places&language=en"></script>
+        <label for="event-location" class="newevent">Location</label>
+        <input class="form-control" type="text" name="location" id="autocomplete"/>
+
+        <script>
+        var input = document.getElementById('autocomplete');
+        new google.maps.places.Autocomplete(input);
+          google.maps.event.addListener(autocomplete, 'place_changed', function(){
+             var place = autocomplete.getPlace();
+          })
+        </script>
+      </div>
+
       <div class="text-center">
         <button type="submit" class="btn submit-button btn-primary">Create</button>
       </div>
