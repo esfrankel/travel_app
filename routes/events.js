@@ -30,7 +30,7 @@ router.post('/', auth.requireLogin, (req, res, next) => {
 
     event.save(function(err, event) {
       if(err) { console.error(err) };
-
+      console.log(event.date)
       return res.redirect(`/trips/${trip._id}`);
     });
   });
