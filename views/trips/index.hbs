@@ -8,6 +8,7 @@
   </a>
 
   <div class="trips-body">
+<<<<<<< HEAD
     {{#each trips as |trip|}}
     <div class="trips summary">
       <h3 class="trips-name">{{trip.name}}</h3>
@@ -22,6 +23,14 @@
         <button class="btn" id="trash"><i class="fa fa-trash"></i></button>
       </form>
     </div>
+=======
+    {{#each trips}}
+      <div class="trips summary">
+        <h3 class="trips-name">{{this.name}}</h3>
+        <p class="trips-events">{{this.events}}</p>
+        <a class="trips-link" href="/trips/{{this._id}}">Read More</a>
+      </div>
+>>>>>>> will
     {{/each}}
   </div>
 
