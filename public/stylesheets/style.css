@@ -340,6 +340,21 @@ a.addevent:hover {
   font-size: 20px;
 }
 
+.new-trip-stuff, .new-event-stuff {
+  background-color:  #FFE9D0;
+  padding: 40px 70px 20px 70px;
+  border-radius: 25px;
+  margin: 0 auto 50px;
+  width: 50%;
+}
+
+.new-trip.content, .new-event-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 h3 {
   font-family: 'Josefin Sans';
 }

@@ -1,21 +1,27 @@
 <form action="/trips" method="post">
 
-  <div class="container-fluid">
-    <div class="new-trip-content section trip-header">
-      <h2 class="login-label">New Trip</h2>
+  <div class="container">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-12">
+        <div class="new-trip-content section trip-header">
+          <h2 class="login-label">New Trip</h2>
 
-      <div class="form-group">
-        <label for="trip-title" id="trip-title">Trip Name</label>
-        <input type="text" name="name" class="form-control" placeholder="e.g. Japan" required minlength="1" maxlength="44" autocomplete="off">
-      </div>
+          <div class="new-trip-stuff">
+            <div class="form-group">
+              <label for="trip-title" id="trip-title">Trip Name</label>
+              <input type="text" name="name" class="form-control" placeholder="e.g. Japan" required minlength="1" maxlength="44" autocomplete="off">
+            </div>
 
-      <div class="form-group">
-        <label for="trip-share" id="trip-share">Share this trip with:</label>
-        <input type="text" name="share" class="form-control" placeholder="johndoe123" autocomplete="off">
-      </div>
+            <div class="form-group">
+              <label for="trip-share" id="trip-share">Share this trip with:</label>
+              <input type="text" name="share" class="form-control" placeholder="johndoe123" autocomplete="off">
+            </div>
 
-      <div class="text-center">
-        <button type="submit" class="btn submit-button btn-primary">Create</button>
+            <div class="text-center">
+              <button type="submit" class="btn submit-button btn-primary">Create</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
