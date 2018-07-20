@@ -2,14 +2,17 @@
   font-family: header-font; src: url('/Good Vibes.ttf');
 }
 
-.login {
+.login-content, .signup-content {
+  z-index: 2;
+  position: relative;
   display: flex;
-  align-items: center;
-}
-
-.login-label {
-  display: flex;
+  flex-direction: column;
   justify-content: center;
+
+  background: rgba(255,255,255,0.4);
+  border-radius: 25px;
+  width: 40%;
+  margin: -60px auto 0;
 }
 
 .submit-button {
@@ -38,7 +41,6 @@
   width: 100%;
   height: 100%;
   z-index: 1;
-  /* opacity: 0.6; */
 
   padding: 200px;
   background-image: url("../img/landing-page-background.jpg");
