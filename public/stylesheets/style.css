@@ -238,6 +238,13 @@ a.trips-link, .event-stuff {
   font-size: 18px;
 }
 
+a.trips-link {
+  border-style: solid;
+  border-color: #FFCC00;
+  border-radius: 5px;
+  padding: 5px 8px 3px 8px;
+}
+
 .eventstuff {
   margin: 1px;
   color: #FFE9D0;
@@ -283,12 +290,15 @@ h3 {
 }
 
 #trash {
-  padding-top: 5px;
   color: #FFCC00 !important;
   background-color:inherit !important;
   border-color: #680707 !important;
+  border: none;
+  padding: 10px 16px 0 16px;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 #trash:hover {
-  color: #808080 !important;
+  color: white !important;
 }

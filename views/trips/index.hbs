@@ -16,10 +16,10 @@
               {{event.name}}
             </p>
           {{/each}}
-        <a class="trips-link" href="/trips/{{this._id}}">Read More</a>
+        <a class="trips-link" href="/trips/{{this._id}}">My Events</a>
         <form class="form" method="POST" action="/trips?_method=DELETE">
           <input style="visibility: hidden; margin:-90px;" name="delete_id" value="{{this._id}}">
-          <button id="trash" type="submit"><i class="fa fa-trash"></i></button>
+          <button class="btn" id="trash"><i class="fa fa-trash"></i></button>
         </form>
       </div>
     {{/each}}
