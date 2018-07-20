@@ -16,17 +16,11 @@
         {{event.name}}
       </p>
       {{/each}}
-
-      <script>
-        function ConfirmDelete()
-        {
-          confirm("Are you sure you want to delete?");
-        }
-      </script>
+      
       <a class="trips-link" href="/trips/{{this._id}}">My Events</a>
       <form class="form" method="POST" action="/trips?_method=DELETE">
         <input style="visibility: hidden; margin:-90px;" name="delete_id" value="{{this._id}}" >
-        <button class="btn" id="trash" Onclick="ConfirmDelete()"><i class="fa fa-trash"></i> </button>
+        <button class="btn" id="trash" Onclick="return confirm('Are you sure you want to delete this item?');"><i class="fa fa-trash"></i> </button>
       </form>
     </div>
     {{/each}}
