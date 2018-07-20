@@ -7,32 +7,12 @@
     Add a new event!
   </a></h3>
 
-
   <div class="events-body">
     {{#each events as |event|}}
-
-    <script>
-      window.onload = function(){
-        var date = {{event.date}};
-        var dd = date.getDate();
-        var mm = date.getMonth()+1; //January is 0!
-        var yyyy = date.getFullYear();
-        if(dd<10){
-          dd='0'+dd
-        }
-        if(mm<10){
-          mm='0'+mm
-        }
-
-        date = mm+'-'+dd+'-'+yyyy;
-        document.getElementById("event-date").innerHTML = date;
-      }
-    </script>
-
     <div class="content events summary">
       <h3 class="event-name">{{event.name}}</h3>
       <div class="event-stuff">
-        <p class="eventstuff event-date" id="event-date">Date: {{event.date}}</p>
+        <p class="eventstuff event-date">Date: {{event.date}}</p>
         <p class="eventstuff event-time">Time: {{event.time}}</p>
         <p class="eventstuff event-price">Price: {{event.price}}</p>
       </div>
