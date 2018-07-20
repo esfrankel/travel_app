@@ -16,6 +16,16 @@
         }
       </script>
 
+      <script>
+        $('#formid').on('keyup keypress', function(e) {
+          var keyCode = e.keyCode || e.which;
+          if (keyCode === 13) {
+            e.preventDefault();
+            return false;
+          }
+        });
+      </script>
+
       <div class="form-group">
         <label for="event-date" class="newevent">Date</label>
         <input type="date" name="date" class="form-control" id="event-date" min="2018-07-01" max="2100-01-01">
