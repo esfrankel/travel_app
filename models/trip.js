@@ -8,6 +8,6 @@ const TripSchema = new Schema ({
   dateto: {type: Date, required: true},
   totalCost: {type: Number},
   users: [{ type: Schema.Types.ObjectId, ref: 'User'}]
-});
+});    
 
 module.exports = mongoose.model('Trip', TripSchema);
