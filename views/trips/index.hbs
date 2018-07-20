@@ -8,16 +8,12 @@
   </a>
 
   <div class="trips-body">
-    {{#each trips as |trip|}}
+    {{#each trips}}
       <div class="trips summary">
-        <h3 class="trips-name">{{trip.name}}</h3>
-          {{#each events as |event|}}
-            <p>
-              {{event.name}}
-            </p>
-          {{/each}}
+        <h3 class="trips-name">{{this.name}}</h3>
+        <p class="trips-events">{{this.events}}</p>
         <a class="trips-link" href="/trips/{{this._id}}">Read More</a>
-        </div>
+      </div>
     {{/each}}
 
   </div>
