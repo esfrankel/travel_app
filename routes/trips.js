@@ -21,7 +21,7 @@ router.get('/', auth.requireLogin, (req, res, next) => {
     }
     res.render('trips/index', { trips: trips, events: events });
   });
-});
+});  
 
 router.get('/new', auth.requireLogin, (req, res, next) =>{
   User.findById(req.params.userId, function(err, trip) {
