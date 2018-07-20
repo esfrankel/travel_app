@@ -1,32 +1,37 @@
 <form action="/trips/{{trip.id}}/events" method="post">
 
-  <div class="container-fluid">
-    <div class="new-event-content section event-header">
+  <div class="container">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-12">
+        <div class="new-event-content section event-header">
+          <h2 class="login-label">New Experience</h2>
 
-      <h2 class="login-label">New Experience</h2>
+          <div class="new-event-stuff">
+            <div class="form-group">
+              <label for="event-title" class="newevent">What do you want to do?</label>
+              <input type="text" name="name" class="form-control" id="event-title" placeholder="e.g. Ride a bike around the city" required minlength="1" maxlength="45" autocomplete="off">
+            </div>
 
-      <div class="form-group">
-        <label for="event-title" class="newevent">What do you want to do?</label>
-        <input type="text" name="name" class="form-control" id="event-title" placeholder="e.g. Ride a bike around the city" required minlength="1" maxlength="45" autocomplete="off">
-      </div>
+            <div class="form-group">
+              <label for="event-date" class="newevent">Date</label>
+              <input type="date" name="date" class="form-control" id="event-date" >
+            </div>
 
-      <div class="form-group">
-        <label for="event-date" class="newevent">Date</label>
-        <input type="date" name="date" class="form-control" id="event-date" >
-      </div>
+            <div class="form-group">
+              <label for="event-time" class="newevent">Time</label>
+              <input type="time" name="time" class="form-control" id="event-time" >
+            </div>
 
-      <div class="form-group">
-        <label for="event-time" class="newevent">Time</label>
-        <input type="time" name="time" class="form-control" id="event-time" >
-      </div>
+            <div class="form-group">
+              <label for="event-price" class="newevent">Price</label>
+              <input type="text" name="price" class="form-control" id="event-price" value="$" autocomplete="off">
+            </div>
 
-      <div class="form-group">
-        <label for="event-price" class="newevent">Price</label>
-        <input type="text" name="price" class="form-control" id="event-price" value="$" autocomplete="off">
-      </div>
-
-      <div class="text-center">
-        <button type="submit" class="btn submit-button btn-primary">Create</button>
+            <div class="text-center">
+              <button type="submit" class="btn submit-button btn-primary">Create</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
