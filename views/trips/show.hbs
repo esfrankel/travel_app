@@ -2,21 +2,22 @@
   <h2>My Trip: {{trip.name}}</h2>
 </div>
 
-<div class="row justify-content-center">
+<div class="section allevents">
   <h3><a href="/trips/{{trip.id}}/events/new" class="btn btn-default addevent">
     Add a new event!
   </a></h3>
-</div>
 
-<div class="events-body">
-  {{#each events as |event|}}
-  <div class="content events summary">
-    <h3 class="event-name">{{event.name}}</h3>
-    <div class="event-stuff">
-      <p class="eventstuff event-date">Date: {{event.date}}</p>
-      <p class="eventstuff event-time">Time: {{event.time}}</p>
-      <p class="eventstuff event-price">Price: {{event.price}}</p>
+  <div class="events-body">
+    {{#each events as |event|}}
+    <div class="content events summary">
+      <h3 class="event-name">{{event.name}}</h3>
+      <div class="event-stuff">
+        <p class="eventstuff event-date">Date: {{event.date}}</p>
+        <p class="eventstuff event-time">Time: {{event.time}}</p>
+        <p class="eventstuff event-price">Price: {{event.price}}</p>
+      </div>
     </div>
+    {{/each}}
   </div>
-  {{/each}}
+
 </div>

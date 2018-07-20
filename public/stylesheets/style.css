@@ -21,10 +21,8 @@
 
 .section.header {
   position: relative;
-  /* background: #c5a289; */
-  /* opacity: 1; */
   overflow: hidden;
-  padding: 160px 0 180px 0;
+  padding: 160px 0 220px 0;
 }
 
 ::placeholder {
@@ -189,7 +187,7 @@ h2 {
   padding: 30px 0 10px 0;
 }
 
-.section.alltrips {
+.section.alltrips, .section.allevents {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -207,6 +205,8 @@ h2 {
 	animation-iteration-count: 1;
 	animation-timing-function: ease-in;
 	animation-duration: 1s;
+
+  background-color:  #FFE9D0;
 }
 
 @keyframes fadeInOpacity {
@@ -283,7 +283,14 @@ a.trips-link:hover {
   background-color: #f9dfd9;
   color: black;
   font-family: 'Josefin Sans';
-  margin-bottom:10px;
+}
+
+#btn-newtrip {
+  margin-bottom: 30px;
+}
+
+a.addevent {
+  margin-bottom: 20px;
 }
 
 #btn-newtrip:hover,
