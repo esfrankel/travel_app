@@ -20,10 +20,42 @@
       <a class="trips-link" href="/trips/{{this._id}}">My Events</a>
       <form class="form" method="POST" action="/trips?_method=DELETE">
         <input style="visibility: hidden; margin:-90px;" name="delete_id" value="{{this._id}}" >
-        <button class="btn" id="trash" Onclick="return confirm('Are you sure you want to delete this item?');"><i class="fa fa-trash"></i> </button>
+        <button class="btn" id="trash" Onclick="return confirm('Are you sure you want to delete this trip?');"><i class="fa fa-trash"></i> </button>
       </form>
     </div>
     {{/each}}
   </div>
-
 </div>
+
+<script>
+function tripGet(){
+  const trips = document.querySelectorAll('.trips-name');
+
+  for(let i = 0; i < trips.length; i++){
+    lengthCheck(trips[i])
+  }
+
+};
+
+function lengthCheck(obj){
+  const $numWords = obj.textContent.length
+
+  if (($numWords >= 1) && ($numWords < 10)) {
+    obj.style.fontSize = "40px"
+  }
+  else if (($numWords >= 10) && ($numWords < 20)) {
+    obj.style.fontSize = "32px"
+  }
+  else if (($numWords >= 20) && ($numWords < 30)) {
+    obj.style.fontSize = "22px"
+  }
+  else if (($numWords >= 30) && ($numWords < 70)) {
+    obj.style.fontSize = "17px"
+  }
+  else {
+    obj.style.fontSize = "10px"
+  }
+}
+
+tripGet();
+</script>
