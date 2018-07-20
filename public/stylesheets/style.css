@@ -297,9 +297,23 @@ a.addevent {
 
 #btn-newtrip:hover,
 a.addevent:hover {
-  color: black;
+  /* color: black;
   font-weight: bold;
-  letter-spacing: 2px;
+  letter-spacing: 2px; */
+
+  width: 170px;
+  height: 40px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  background-color: #F6D0C7;
+  border-color: #F6D0C7;
+  transition: background-color 0.1s ease-in;
+              width 0.1s ease-in,
+              height 0.1s ease-in,
+              line-height 0.1s ease-in;
 }
 
 #trip-title, #trip-share,
