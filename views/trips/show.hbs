@@ -7,10 +7,6 @@
     Add a new event!
   </a></h3>
 
-  <p>
-    Total cost: {{totalCost}}
-  </p>
-
   <div class="events-body">
     {{#each events as |event|}}
     <div class="content events summary">
@@ -19,7 +15,7 @@
         <p class="eventstuff event-date">Date: {{event.date}}</p>
         <p class="eventstuff event-loc">Location: {{event.loc}}</p>
         <p class="eventstuff event-time">Time: {{event.time}}</p>
-        <p class="eventstuff event-price">Price: {{event.price}}</p>
+        <p class="eventstuff event-price">Price: ${{event.price}}</p>
       </div>
       <form class="form" method="POST" action="/events?_method=DELETE">
         <input style="visibility: hidden; margin:-90px;" name="delete_id" value="{{this._id}}" >

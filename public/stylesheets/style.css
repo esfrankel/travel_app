@@ -243,7 +243,7 @@ h2 {
   background-color: #680707;
   padding: 10px 0;
   margin: 2%;
-  height: 12em;
+  height: 16em;
   width: 25%;
   text-align: center;
   color: white;
@@ -251,7 +251,7 @@ h2 {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  overflow: hidden
+  overflow: hidden;
 }
 
 h3.trips-name {
@@ -362,7 +362,7 @@ a.addevent:hover {
 }
 
 #date1, #date2 {
-  width: 205%;
+  width: 228%;
   margin: auto;
 
 }
