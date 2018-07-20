@@ -9,19 +9,19 @@
 
   <div class="trips-body">
     {{#each trips as |trip|}}
-      <div class="trips summary">
-        <h3 class="trips-name">{{trip.name}}</h3>
-          {{#each events as |event|}}
-            <p>
-              {{event.name}}
-            </p>
-          {{/each}}
-        <a class="trips-link" href="/trips/{{this._id}}">My Events</a>
-        <form class="form" method="POST" action="/trips?_method=DELETE">
-          <input style="visibility: hidden; margin:-90px;" name="delete_id" value="{{this._id}}">
-          <button class="btn" id="trash"><i class="fa fa-trash"></i></button>
-        </form>
-      </div>
+    <div class="trips summary">
+      <h3 class="trips-name">{{trip.name}}</h3>
+      {{#each events as |event|}}
+      <p>
+        {{event.name}}
+      </p>
+      {{/each}}
+      <a class="trips-link" href="/trips/{{this._id}}">My Events</a>
+      <form class="form" method="POST" action="/trips?_method=DELETE">
+        <input style="visibility: hidden; margin:-90px;" name="delete_id" value="{{this._id}}">
+        <button class="btn" id="trash"><i class="fa fa-trash"></i></button>
+      </form>
+    </div>
     {{/each}}
 
   </div>

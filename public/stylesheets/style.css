@@ -201,6 +201,21 @@ h2 {
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
+
+  opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 1s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 .trips.summary, .events.summary {
@@ -258,7 +273,7 @@ a.trips-link:link {
 }
 a.trips-link:hover {
   font-size: 20px;
-  margin-top: -4px;
+  margin-top: 5px;
   text-decoration: none;
   font-weight: bold;
 }
@@ -301,4 +316,5 @@ h3 {
 
 #trash:hover {
   color: white !important;
+
 }
