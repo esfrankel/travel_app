@@ -221,9 +221,8 @@ h2 {
 }
 
 .trips.summary, .events.summary {
-  border: 1px solid black;
   border-radius: 5px;
-  border: 2px solid #680707;
+  border: 20px solid #680707;
   background-color: #680707;
   padding: 10px 0;
   margin: 2%;
@@ -235,13 +234,14 @@ h2 {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  overflow: hidden
 }
 
 h3.trips-name {
   font-family: Bitter;
   font-weight: bold;
-  letter-spacing: 3px;
-  font-size: 40px;
+  letter-spacing: 2px;
+  margin: 0 1.2em;
 }
 
 h3.event-name {
@@ -260,6 +260,7 @@ a.trips-link {
   border-color: #FFCC00;
   border-radius: 5px;
   padding: 5px 8px 3px 8px;
+  margin: 10px 0;
 }
 
 .eventstuff {
@@ -275,7 +276,6 @@ a.trips-link:link {
 }
 a.trips-link:hover {
   font-size: 20px;
-  margin-top: 5px;
   text-decoration: none;
   font-weight: bold;
 }
@@ -332,8 +332,9 @@ h3 {
   background-color:inherit !important;
   border-color: #680707 !important;
   border: none;
-  padding: 10px 16px 0 16px;
+  margin: auto;
   font-size: 20px;
+  padding: 0;
   cursor: pointer;
 }
 
