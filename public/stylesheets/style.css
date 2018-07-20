@@ -327,3 +327,8 @@ h3 {
   color: white !important;
 
 }
+
+#trash:focus #trash:active {
+   outline: none !important;
+   box-shadow: none;
+}
