@@ -38,9 +38,15 @@ router.get('/:id', auth.requireLogin, (req, res, next) => {
     Event_Test.find({ trip: trip })
       .sort({ _id:-1})
       .exec(function(err, events) {
-
         if(err) { console.error(err) };
-      res.render('trips/show', { trip: trip, events: events, tripId: req.params.id });
+        // obj = JSON.parse(json)
+        var totalCost = 0;
+        for (let prop in events){
+          totalCost += events[prop]['price'];
+        }
+        console.log(totalCost);
+
+      res.render('trips/show', { trip: trip, events: events, totalCost, tripId: req.params.id });
     });
   });
 });

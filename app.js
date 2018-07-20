@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const session = require('express-session');
 var methodOverride = require('method-override')
-
+var exphbs = require('express-handlebars')
 
 
 
@@ -16,7 +16,17 @@ var eventsRouter = require('./routes/events');
 
 var app = express();
 
+var hbs = exphbs.create({
+    // Specify helpers which are only registered on this instance.
+    helpers: {
+        foo: function () { return 'FOO!'; },
+        bar: function () { return 'BAR!'; }
+    }
+});
+
+
 // view engine setup
+app.engine('handlebars', hbs.engine);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
